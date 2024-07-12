@@ -11,7 +11,7 @@ const projectsData = [
     description: "Developed a Next.js-based food ordering system with comprehensive features for user authentication, secure data handling, and payment processing.",
     image: "/images/projects/7.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Hamza75950/Hamza75950-Food_Ordering_Website_Next.js_React",
     previewUrl: "/",
   },
 
