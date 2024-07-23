@@ -14,6 +14,15 @@ const projectsData = [
     gitUrl: "https://github.com/Hamza75950/Hamza75950-Food_Ordering_Website_Next.js_React",
     previewUrl: "/",
   },
+  {
+    id: 2,
+    title: "Text Utils Website",
+    description: "Developed a react.js-based text utility website which manipulate text on command",
+    image: "/images/projects/8.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Hamza75950/React_Props_and_State",
+    previewUrl: "https://textutils-klmbbpj8l-hamzas-projects-98ccd4dd.vercel.app/",
+  },
 
 ];
 
