@@ -3,6 +3,7 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
+
 const TAB_DATA = [
   {
     title: "Skills",
@@ -54,7 +55,7 @@ const AboutSection = () => {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 items-center py-8 px-4 xl: sm:py-16  xl:px-16">
         <Image
-          className="ml-32 sm:mx-auto"
+          className="ml-32 "
           src="/images/pose_52.png"
           width={500}
           height={500}
