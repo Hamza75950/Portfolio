@@ -9,6 +9,22 @@ const HeroSection = () => {
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
+      <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-4 place-self-center mt-4 lg:mt-0"
+        >
+          <div className="w-[250px] h-[250px] md:ml-56 lg:w-[700px] lg:h-[700px] relative">
+            <Image
+              src="/images/pose_52.png"
+              alt="hero image"
+              className="absolute  transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              width={700}
+              height={700}
+            />
+          </div>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -47,7 +63,7 @@ const HeroSection = () => {
             </Link>
           </div> */}
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -62,7 +78,7 @@ const HeroSection = () => {
               height={700}
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

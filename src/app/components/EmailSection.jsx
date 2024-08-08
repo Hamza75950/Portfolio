@@ -63,9 +63,8 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative "
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
@@ -85,7 +84,7 @@ const EmailSection = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div >
         <StyledContactForm>
           <form ref={form} onSubmit={sendEmail}>
             <label>Name</label>
@@ -167,8 +166,62 @@ const EmailSection = () => {
 
 export default EmailSection;
 
+// const StyledContactForm = styled.div`
+//   width: 400px;
+
+//   form {
+//     display: flex;
+//     align-items: flex-start;
+//     flex-direction: column;
+//     width: 100%;
+//     font-size: 16px;
+
+//     input {
+//       width: 100%;
+//       height: 35px;
+//       padding: 7px;
+//       outline: none;
+//       border-radius: 5px;
+//       border: 1px solid rgb(220, 220, 220);
+
+//       &:focus {
+//         border: 2px solid rgba(0, 206, 158, 1);
+//       }
+//     }
+
+//     textarea {
+//       max-width: 100%;
+//       min-width: 100%;
+//       width: 100%;
+//       max-height: 100px;
+//       min-height: 100px;
+//       padding: 7px;
+//       outline: none;
+//       border-radius: 5px;
+//       border: 1px solid rgb(220, 220, 220);
+
+//       &:focus {
+//         border: 2px solid rgba(0, 206, 158, 1);
+//       }
+//     }
+
+//     label {
+//       margin-top: 1rem;
+//     }
+
+//     input[type="submit"] {
+//       margin-top: 2rem;
+//       cursor: pointer;
+//       background: rgb(249, 105, 14);
+//       color: white;
+//       border: none;
+//     }
+//   }
+// `;
+
 const StyledContactForm = styled.div`
-  width: 400px;
+  max-width: 100%;  /* Ensure the form container doesn't exceed the screen width */
+  padding: 10px;    /* Add some padding to ensure content doesn't touch the edges */
 
   form {
     display: flex;
@@ -177,13 +230,14 @@ const StyledContactForm = styled.div`
     width: 100%;
     font-size: 16px;
 
-    input {
-      width: 100%;
+    input, textarea {
+      width: 100%;  /* Make inputs take full width of the container */
       height: 35px;
       padding: 7px;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
+      box-sizing: border-box;  /* Ensure padding is included in the width */
 
       &:focus {
         border: 2px solid rgba(0, 206, 158, 1);
@@ -191,19 +245,9 @@ const StyledContactForm = styled.div`
     }
 
     textarea {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
       max-height: 100px;
       min-height: 100px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
+      height: 100px;  /* Ensure textarea has a consistent height */
     }
 
     label {
@@ -216,6 +260,29 @@ const StyledContactForm = styled.div`
       background: rgb(249, 105, 14);
       color: white;
       border: none;
+      width: auto;  /* Allow the submit button to size based on its content */
+    }
+  }
+
+  @media (max-width: 768px) {  /* Adjust styles for screens smaller than 768px */
+    padding: 5px;
+
+    form {
+      font-size: 14px;
+
+      input, textarea {
+        height: 30px;
+        padding: 5px;
+      }
+
+      textarea {
+        min-height: 80px;
+        max-height: 80px;
+      }
+
+      input[type="submit"] {
+        margin-top: 1.5rem;
+      }
     }
   }
 `;

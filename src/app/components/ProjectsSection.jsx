@@ -10,7 +10,7 @@ const projectsData = [
     title: "Food Ordering Website",
     description: "Developed a Next.js-based food ordering system with comprehensive features for user authentication, secure data handling, and payment processing.",
     image: "/images/projects/7.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Next.js"],
     gitUrl: "https://github.com/Hamza75950/Hamza75950-Food_Ordering_Website_Next.js_React",
     previewUrl: "/",
   },
@@ -19,7 +19,7 @@ const projectsData = [
     title: "Text Utils Website",
     description: "Developed a react.js-based text utility website which manipulate text on command",
     image: "/images/projects/8.png",
-    tag: ["All", "Web"],
+    tag: ["All", "React.js"],
     gitUrl: "https://github.com/Hamza75950/React_Props_and_State",
     previewUrl: "https://textutils-klmbbpj8l-hamzas-projects-98ccd4dd.vercel.app/",
   },
@@ -57,8 +57,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="React.js"
+          isSelected={tag === "React.js"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Next.js"
+          isSelected={tag === "Next.js"}
         />
         
       </div>
