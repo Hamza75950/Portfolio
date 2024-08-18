@@ -8,22 +8,46 @@ const projectsData = [
   {
     id: 1,
     title: "Food Ordering Website",
-    description: "Developed a Next.js-based food ordering system with comprehensive features for user authentication, secure data handling, and payment processing.",
+    description:
+      "Developed a Next.js-based food ordering system with comprehensive features for user authentication, secure data handling, and payment processing.",
     image: "/images/projects/7.png",
     tag: ["All", "Next.js"],
-    gitUrl: "https://github.com/Hamza75950/Hamza75950-Food_Ordering_Website_Next.js_React",
+    gitUrl:
+      "https://github.com/Hamza75950/Hamza75950-Food_Ordering_Website_Next.js_React",
     previewUrl: "/",
   },
   {
     id: 2,
     title: "Text Utils Website",
-    description: "Developed a react.js-based text utility website which manipulate text on command",
+    description:
+      "Developed a react.js-based text utility website which manipulate text on command",
     image: "/images/projects/8.png",
     tag: ["All", "React.js"],
     gitUrl: "https://github.com/Hamza75950/React_Props_and_State",
-    previewUrl: "https://textutils-klmbbpj8l-hamzas-projects-98ccd4dd.vercel.app/",
+    previewUrl:
+      "https://textutils-klmbbpj8l-hamzas-projects-98ccd4dd.vercel.app/",
   },
-
+  {
+    id: 3,
+    title: "News Website || Class Base Components",
+    description:
+      "A responsive React app with class-based components, featuring infinite scroll and a top loading bar.",
+    image: "/images/projects/9.png",
+    tag: ["All", "React.js"],
+    gitUrl: "https://github.com/Hamza75950/News_Website.git",
+    previewUrl: "/",
+  },
+  {
+    id: 4,
+    title: "News Website || Function Base Components",
+    description:
+      "A responsive React app with function-based components, featuring infinite scroll and a top loading bar.",
+    image: "/images/projects/10.png",
+    tag: ["All", "React.js"],
+    gitUrl:
+      "https://github.com/Hamza75950/News_App_Function_Base_Components.git",
+    previewUrl: "/",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -65,7 +89,6 @@ const ProjectsSection = () => {
           name="Next.js"
           isSelected={tag === "Next.js"}
         />
-        
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
