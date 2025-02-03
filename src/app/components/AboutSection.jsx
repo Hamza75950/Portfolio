@@ -3,19 +3,17 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
-
 const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>React Native</li>
         <li>React.js</li>
         <li>Next.js</li>
-        <li>Express</li>
         <li>MongoDB</li>
         <li>PostgreSQL</li>
-        <li>Node.js</li>
         <li>JavaScript</li>
       </ul>
     ),
@@ -25,7 +23,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>BSCS from KIET</li>
+        <li>{`BSCS from KIET (3.9 CGPA)`}</li>
         <li>BSc. from University of Karachi</li>
       </ul>
     ),
@@ -36,6 +34,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Web Development Bootcamp by Dr. Angila Yu on udemy</li>
+        <li>Graphic Designing Diploma From Click5</li>
       </ul>
     ),
   },

@@ -53,6 +53,7 @@ const EmailSection = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          alert("Email Sent");
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -84,7 +85,7 @@ const EmailSection = () => {
           </Link>
         </div>
       </div>
-      <div >
+      <div>
         <StyledContactForm>
           <form ref={form} onSubmit={sendEmail}>
             <label>Name</label>
@@ -220,8 +221,8 @@ export default EmailSection;
 // `;
 
 const StyledContactForm = styled.div`
-  max-width: 100%;  /* Ensure the form container doesn't exceed the screen width */
-  padding: 10px;    /* Add some padding to ensure content doesn't touch the edges */
+  max-width: 100%; /* Ensure the form container doesn't exceed the screen width */
+  padding: 10px; /* Add some padding to ensure content doesn't touch the edges */
 
   form {
     display: flex;
@@ -230,14 +231,15 @@ const StyledContactForm = styled.div`
     width: 100%;
     font-size: 16px;
 
-    input, textarea {
-      width: 100%;  /* Make inputs take full width of the container */
+    input,
+    textarea {
+      width: 100%; /* Make inputs take full width of the container */
       height: 35px;
       padding: 7px;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
-      box-sizing: border-box;  /* Ensure padding is included in the width */
+      box-sizing: border-box; /* Ensure padding is included in the width */
 
       &:focus {
         border: 2px solid rgba(0, 206, 158, 1);
@@ -247,7 +249,7 @@ const StyledContactForm = styled.div`
     textarea {
       max-height: 100px;
       min-height: 100px;
-      height: 100px;  /* Ensure textarea has a consistent height */
+      height: 100px; /* Ensure textarea has a consistent height */
     }
 
     label {
@@ -260,17 +262,19 @@ const StyledContactForm = styled.div`
       background: rgb(249, 105, 14);
       color: white;
       border: none;
-      width: auto;  /* Allow the submit button to size based on its content */
+      width: auto; /* Allow the submit button to size based on its content */
     }
   }
 
-  @media (max-width: 768px) {  /* Adjust styles for screens smaller than 768px */
+  @media (max-width: 768px) {
+    /* Adjust styles for screens smaller than 768px */
     padding: 5px;
 
     form {
       font-size: 14px;
 
-      input, textarea {
+      input,
+      textarea {
         height: 30px;
         padding: 5px;
       }
